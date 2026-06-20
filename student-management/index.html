@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <input type="search" placeholder="Search" class="search" />
+      <form class="add-student">
+        <input class="st-name" placeholder="Student Name" type="text" />
+        <input class="st-group" placeholder="Student Group" type="text" />
+        <input class="st-faculty" placeholder="Student Faculty" type="text" />
+        <input
+          class="st-specialization"
+          placeholder="Student Specialization"
+          type="text"
+        />
+        <button class="add" type="button" onclick="addStudent()">Add</button>
+      </form>
+      <div class="students-container"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

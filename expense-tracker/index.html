@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <form>
+        <input class="title" type="text" placeholder="Title" />
+        <input class="desc" type="text" placeholder="Description" />
+        <input class="amount" type="number" placeholder="amount" />
+
+        <div class="buttons">
+          <button type="button" onclick="setType('income')">Income</button>
+          <button type="button" onclick="setType('expense')">Expense</button>
+        </div>
+
+        <button type="button" class="add" onclick="addRecord()">Add</button>
+      </form>
+
+      <div class="balance">Balance : <span>0</span></div>
+
+      <div class="records-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

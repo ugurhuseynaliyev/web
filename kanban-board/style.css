@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  height: 100vh;
+}
+
+.search input {
+  border: none;
+  padding: 10px;
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+
+.search button {
+  border: none;
+  background: blue;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin-top: 20px;
+  gap: 20px;
+  color: white;
+}
+
+.tasks h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tasks .todo,
+.in-progress,
+.completed {
+  background: blue;
+  padding: 20px;
+}
+
+.task {
+  background: white;
+  color: black;
+  padding: 5px;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 100px;
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="search">
+      <input type="text" class="task-value" placeholder="Enter task..." />
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <div class="tasks">
+      <div class="todo">
+        <h3>Todo</h3>
+        <div class="todos"></div>
+      </div>
+      <div class="in-progress">
+        <h3>In Progress</h3>
+        <div class="todos"></div>
+      </div>
+      <div class="completed">
+        <h3>Completed</h3>
+        <div class="todos"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

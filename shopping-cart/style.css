@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  width: 30%;
+  border-radius: 20px;
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.product img {
+  width: 90%;
+  height: 200px;
+  background: #d1d1d1;
+  border-radius: 10px;
+}
+
+.p-title,
+.p-price {
+  color: white;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.counter p {
+  color: white;
+}
+
+.counter button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.add {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  background: blue;
+  width: 80%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cart-item .left {
+  display: flex;
+  gap: 20px;
+}
+
+.cart-item .delete {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  padding: 5px;
+}
