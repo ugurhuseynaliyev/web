@@ -18,10 +18,10 @@ students_container.addEventListener("click", function (e) {
   const specEl = studentDiv.querySelector(".student-specialization");
 
   if (e.target.innerText === "Edit") {
-    nameEl.innerText = `<input class="edit-name" value="${nameEl.innerText}">`;
-    groupEl.innerText = `<input class="edit-group" value="${groupEl.innerText}">`;
-    facultyEl.innerText = `<input class="edit-faculty" value="${facultyEl.innerText}">`;
-    specEl.innerText = `<input class="edit-spec" value="${specEl.innerText}">`;
+    nameEl.innerHTML = `<input class="edit-name" value="${nameEl.innerText}">`;
+    groupEl.innerHTML = `<input class="edit-group" value="${groupEl.innerText}">`;
+    facultyEl.innerHTML = `<input class="edit-faculty" value="${facultyEl.innerText}">`;
+    specEl.innerHTML = `<input class="edit-spec" value="${specEl.innerText}">`;
 
     e.target.innerText = "Save";
   } else {
