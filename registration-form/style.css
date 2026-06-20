@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register {
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+.register input {
+  padding: 10px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  outline: none;
+}
+
+.register button {
+  padding: 10px;
+  background-color: blue;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+small {
+  font-size: 12px;
+  display: block;
+}
+
+.strength {
+  color: gray;
+}
+
+.match {
+  color: red;
+}
