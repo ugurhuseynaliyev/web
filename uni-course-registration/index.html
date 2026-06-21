@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>University Course Registration</h2>
+
+    <div class="courses">
+      <button onclick="addCourse('Math', 5)">Math (5 cr)</button>
+      <button onclick="addCourse('Physics', 4)">Physics (4 cr)</button>
+      <button onclick="addCourse('Programming', 6)">Programming (6 cr)</button>
+      <button onclick="addCourse('History', 3)">History (3 cr)</button>
+    </div>
+
+    <h3>Selected Courses:</h3>
+    <ul id="list"></ul>
+
+    <h3>Total Credits: <span id="total">0</span></h3>
+
+    <script src="script.js"></script>
+  </body>
+</html>

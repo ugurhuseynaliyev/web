@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="file" id="upload" accept="image/*" />
+    
+    <div class="controls">
+      <label>Width:</label>
+      <input type="range" id="width" min="100" max="800" value="400" />
+
+      <label>Rotate:</label>
+      <input type="range" id="rotate" min="0" max="360" value="0" />
+
+      <button id="grayBtn">Grayscale</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
