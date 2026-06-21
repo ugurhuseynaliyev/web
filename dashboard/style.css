@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.time {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 30px;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.tasks-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.taskValue {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.add {
+  border: none;
+  background: blue;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: red;
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
