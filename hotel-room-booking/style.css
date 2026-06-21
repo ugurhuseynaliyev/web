@@ -1,0 +1,16 @@
+.room {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.occupied {
+  opacity: 0.5;
+  background: #f44336;
+  color: white;
+}
+
+button:disabled {
+  background: #999;
+}
