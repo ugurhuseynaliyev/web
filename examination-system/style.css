@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3e3eff;
+  gap: 20px;
+}
+
+.app .start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 80%;
+}
+
+.app h2 {
+  color: white;
+  font-size: 50px;
+}
+
+.app button {
+  border: none;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.exam {
+  display: none;
+}
+
+.question-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px 30px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.question-card .top {
+  display: flex;
+  gap: 10px;
+}
+
+.question-card .top span {
+  width: 30px;
+  height: 30px;
+  background: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.question-card .answers .row {
+  display: flex;
+  gap: 10px;
+}
+
+.question-card .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.result p {
+  color: white;
+  font-size: 25px;
+}
