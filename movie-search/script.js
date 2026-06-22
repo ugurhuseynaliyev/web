@@ -1,32 +1,60 @@
-async function search() {
-  const query = document.querySelector("input").value;
-  const url = `https://imdb.iamidiotareyoutoo.com/search?q=${query}`;
+const moviesData = [
+  {
+    title: "Inception",
+    year: 2010,
+    img: "https://via.placeholder.com/150x220?text=Inception",
+  },
+  {
+    title: "Interstellar",
+    year: 2014,
+    img: "https://via.placeholder.com/150x220?text=Interstellar",
+  },
+  {
+    title: "The Dark Knight",
+    year: 2008,
+    img: "https://via.placeholder.com/150x220?text=Dark+Knight",
+  },
+  {
+    title: "The Matrix",
+    year: 1999,
+    img: "https://via.placeholder.com/150x220?text=Matrix",
+  },
+];
 
-  const res = await fetch(url);
-  const data = await res.json();
+function search() {
+  const query = document.querySelector("#movie-name").value.toLowerCase();
+  const yearFilter = document.querySelector(".year").value;
 
-  renderMovies(data.description);
+  const filtered = moviesData.filter((movie) => {
+    const matchesTitle = movie.title.toLowerCase().includes(query);
+    const matchesYear = yearFilter ? movie.year == yearFilter : true;
+
+    return matchesTitle && matchesYear;
+  });
+
+  renderMovies(filtered);
 }
 
 function renderMovies(movies) {
   const container = document.querySelector(".result");
-  const yearFilter = document.querySelector(".year").value;
   container.innerHTML = "";
 
-  movies
-    .filter((movie) => {
-      if (!yearFilter) return true;
-      return movie["#YEAR"] == yearFilter;
-    })
-    .forEach((movie) => {
-      container.innerHTML += `
-        <div class="card">
-            <img src="${movie["#IMG_POSTER"]} alt="poster"/>
+  if (movies.length === 0) {
+    container.innerHTML = "<p>No movies found</p>";
+    return;
+  }
 
-            <h3>${movie["#TITLE"]}</h3>
+  movies.forEach((movie) => {
+    container.innerHTML += `
+      <div class="card">
+        <img src="${movie.img}" alt="poster" />
 
-            <p>Year: ${movie["#YEAR"]}</p>
-        </div>
+        <h3>${movie.title}</h3>
+
+        <p>Year: ${movie.year}</p>
+      </div>
     `;
-    });
+  });
 }
+
+renderMovies(moviesData);
