@@ -1,0 +1,15 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid gray;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+canvas {
+    max-width: 100%;
+}
