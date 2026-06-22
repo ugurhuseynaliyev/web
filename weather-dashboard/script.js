@@ -1,25 +1,43 @@
-async function search() {
-  const city = document.getElementById("city").value;
+const weatherDataList = [
+  {
+    city: "Baku",
+    country: "Azerbaijan",
+    temperature_2m: 28,
+    relative_humidity_2m: 60,
+    apparent_temperature: 30,
+    wind_speed_10m: 12,
+  },
+  {
+    city: "London",
+    country: "UK",
+    temperature_2m: 18,
+    relative_humidity_2m: 70,
+    apparent_temperature: 17,
+    wind_speed_10m: 8,
+  },
+  {
+    city: "Moscow",
+    country: "Russia",
+    temperature_2m: 10,
+    relative_humidity_2m: 80,
+    apparent_temperature: 8,
+    wind_speed_10m: 15,
+  },
+];
 
-  const geoRes = await fetch(
-    `https://geocoding-api.open-meteo.com/v1/search?name=${city}`,
+function search() {
+  const city = document.getElementById("city").value.toLowerCase().trim();
+
+  const found = weatherDataList.find(
+    (item) => item.city.toLowerCase() === city,
   );
-  const geoData = await geoRes.json();
 
-  if (!geoData.results) {
+  if (!found) {
     document.getElementById("result").innerText = "City Not Found!";
     return;
   }
 
-  const { latitude, longitude, name, country } = geoData.results[0];
-
-  const weatherRes = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,wind_speed_10m,weather_code`,
-  );
-  const weatherData = await weatherRes.json();
-  const c = weatherData.current;
-
-  const temp = c.temperature_2m;
+  const temp = found.temperature_2m;
 
   if (temp >= 25) {
     document.body.style.background = "#ffd54f";
@@ -31,11 +49,11 @@ async function search() {
 
   document.getElementById("result").innerHTML = `
         <div class="wrapper">
-          <h2 class="name">${name}, ${country}</h2>
-          <p class="temp">Temperature: ${c.temperature_2m}°C</p>
-          <p class="apparent">Apparent Temperature: ${c.apparent_temperature}°C</p>
-          <p class="humidity">Humidity: ${c.relative_humidity_2m}%</p>
-          <p class="wind">Wind Speed: ${c.wind_speed_10m} km/saat</p>
+          <h2 class="name">${found.city}, ${found.country}</h2>
+          <p class="temp">Temperature: ${found.temperature_2m}°C</p>
+          <p class="apparent">Apparent Temperature: ${found.apparent_temperature}°C</p>
+          <p class="humidity">Humidity: ${found.relative_humidity_2m}%</p>
+          <p class="wind">Wind Speed: ${found.wind_speed_10m} km/saat</p>
         </div>
       `;
 }
