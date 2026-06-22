@@ -25,12 +25,18 @@ students_container.addEventListener("click", function (e) {
 
     e.target.innerText = "Save";
   } else {
-    nameEl.innerText = studentDiv.querySelector(".edit-name").value;
-    groupEl.innerText = studentDiv.querySelector(".edit-group").value;
-    facultyEl.innerText = studentDiv.querySelector(".edit-faculty").value;
-    specEl.innerText = studentDiv.querySelector(".edit-spec").value;
+    const id = Number(studentDiv.dataset.id);
+
+    const student = students.find((s) => s.id === id);
+
+    student.name = studentDiv.querySelector(".edit-name").value;
+    student.group = studentDiv.querySelector(".edit-group").value;
+    student.faculty = studentDiv.querySelector(".edit-faculty").value;
+    student.specialization = studentDiv.querySelector(".edit-spec").value;
 
     e.target.innerText = "Edit";
+
+    renderStudents(searchInput.value.toLowerCase());
   }
 });
 
@@ -69,7 +75,7 @@ function renderStudents(searchValue = "") {
 
   filteredStudents.forEach((student) => {
     const studentHtml = `
-     <div class="student">
+     <div class="student" data-id="${student.id}">
           <p class="student-name">${student.name}</p>
           <p class="student-group">${student.group}</p>
           <p class="student-faculty">${student.faculty}</p>
