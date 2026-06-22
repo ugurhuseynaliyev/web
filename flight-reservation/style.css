@@ -1,0 +1,33 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  padding: 20px;
+}
+
+#seats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  gap: 10px;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  background: lightgray;
+  cursor: pointer;
+  border-radius: 5px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.seat.selected {
+  background: green;
+  color: white;
+}

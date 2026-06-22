@@ -7,18 +7,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Crypto Dashboard</h1>
+    <div class="top">
+      <input type="text" id="projectName" placeholder="New project name" />
+      <button onclick="addProject()">Add Project</button>
+    </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Coin</th>
-          <th>Price ($)</th>
-          <th>24h Change</th>
-        </tr>
-      </thead>
-      <tbody id="crypto"></tbody>
-    </table>
+    <div id="projects"></div>
 
     <script src="script.js"></script>
   </body>
